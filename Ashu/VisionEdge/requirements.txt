@@ -1,0 +1,10 @@
+opencv-python
+numpy
+av
+ultralytics
+torch
+fastapi
+uvicorn
+python-multipart
+requests
+aiortc
