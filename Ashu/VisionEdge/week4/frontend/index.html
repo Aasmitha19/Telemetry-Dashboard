@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VisionEdge - Week 4</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            color: #222;
+        }
+
+        header {
+            background: #111827;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 6px;
+        }
+
+        header p {
+            color: #d1d5db;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .status {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .online {
+            color: green;
+            font-weight: bold;
+        }
+
+        .streams {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .stream-card {
+            background: white;
+            border-radius: 12px;
+            padding: 15px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+        }
+
+        .stream-card h2 {
+            margin-bottom: 12px;
+        }
+
+        .stream-card img {
+            width: 100%;
+            display: block;
+            border-radius: 8px;
+            background: black;
+        }
+
+        @media (max-width: 800px) {
+            .streams {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>VisionEdge</h1>
+        <p>Week 4 - Multiple Video Stream Detection</p>
+    </header>
+
+    <div class="container">
+
+        <div class="status">
+            Backend Status:
+            <span class="online">ONLINE</span>
+        </div>
+
+        <div class="streams">
+
+            <div class="stream-card">
+                <h2>Stream 1</h2>
+
+                <img
+                    src="http://localhost:8000/video_feed/1?source=video1.mp4"
+                    alt="Stream 1"
+                >
+            </div>
+
+            <div class="stream-card">
+                <h2>Stream 2</h2>
+
+                <img
+                    src="http://localhost:8000/video_feed/2?source=video2.mp4"
+                    alt="Stream 2"
+                >
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
